@@ -10,7 +10,7 @@ class DiagnosisSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Diagnosis
-        fields = ('diagnosis_code' ,  'abbreviated_description' ,  'full_description' , 'category', 'full_code' )
+        fields = ('diagnosis_code' ,  'abbreviated_description' ,  'full_description' , 'category', 'full_code', 'code_type' )
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:

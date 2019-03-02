@@ -25,8 +25,8 @@ SECRET_KEY = 'v$o5!%y#r+kjslc3=brsny%ssz-e-mz-)e)s&$vzhx2*)i9b70'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost' , 'testserver']
 
 # Application definition
 
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'diagnosisApi.apps.DiagnosisapiConfig',
     'rest_framework_swagger',
+    'autofixture',
+    #'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -105,9 +107,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 20
+    'PAGE_SIZE': 20,
+
 }
 
+'''     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],'''
 
 
 

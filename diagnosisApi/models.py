@@ -17,7 +17,8 @@ class Category(models.Model):
 
 
 class Diagnosis(models.Model):
-    diagnosis_code  = models.IntegerField()
+    diagnosis_code  = models.CharField(max_length=7)
+    code_type = models.CharField(max_length=7, default='icd-10')
     abbreviated_description  =  models.CharField(max_length=200)
     full_description  =  models.TextField()
     category =  models.ForeignKey(Category,  on_delete=models.CASCADE)
@@ -26,8 +27,8 @@ class Diagnosis(models.Model):
 
 
 
+
     class Meta :
-        db_table  =  "icd-10"
 
         def __str__(self):
             return "{} , {} , {} ".format(self.diagnosis_code ,  self.abbreviated_description , self.full_description )

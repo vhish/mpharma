@@ -18,7 +18,7 @@ from django.urls import path ,  include
 from rest_framework.documentation import include_docs_urls
 from django.conf.urls import url
 from rest_framework_swagger.views import get_swagger_view
-
+from rest_framework.authtoken.views import obtain_auth_token
 
 schema_view = get_swagger_view(title="Swagger Docs")
 
@@ -26,4 +26,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('' , include('diagnosisApi.urls' , namespace='diagnosisApi' )  ),
     url(r'^docs/', schema_view),
+    #path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]
