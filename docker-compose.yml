@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  app:
+    build: .
+    tty: true
+    stdin_open: true
+    restart: always
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    links:
+      - db
+    working_dir: /mpharma
+    volumes:
+      - .:/mpharma
+      - ./ssh:/root/.ssh
+    command: ./manage.py runserver 0.0.0.0:8000
+
+  db:
+    image: postgres:10.4
