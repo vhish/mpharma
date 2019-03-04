@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'diagnosisApi.apps.DiagnosisapiConfig',
     'rest_framework_swagger',
-    'autofixture',
+    #'autofixture',
     #'rest_framework.authtoken',
 ]
 
@@ -106,7 +106,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'HOST': 'db',
-        'PORT': 5432 
+        'PORT': 5432
     }
 }
 

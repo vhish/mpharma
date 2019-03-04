@@ -3,9 +3,6 @@ FROM python:3.6-alpine
 
 LABEL maintainer vhishious@yahoo.com
 
-RUN git clone -q https://github.com/vhish/mpharma.git
-
-WORKDIR mpharma
 
 RUN mkdir -p /mpharma
 
@@ -17,7 +14,14 @@ WORKDIR /mpharma
 
 ADD requirements.txt /mpharma/
 
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
+
+RUN \
+ apk add --no-cache postgresql-libs && \
+ apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev && \
+ python3 -m pip install -r requirements.txt --no-cache-dir && \
+ apk --purge del .build-deps
+
 
 EXPOSE 8000
 
