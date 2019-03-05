@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Category(models.Model):
-    category_code = models.CharField(max_length=10)
+    category_code = models.CharField(max_length=10 , primary_key=True)
     category_title =  models.TextField()
     created_at  =  models.DateTimeField(auto_now_add=True)
     updated_at  =  models.DateTimeField(auto_now=True)
