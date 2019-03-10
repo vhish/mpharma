@@ -39,7 +39,8 @@ Adding authorisation to the api.
 
 ___
 <a id="references"></a>
-[References](#references)
+## References
 https://github.com/kamillamagna/ICD-10-CSV https://en.wikipedia.org/wiki/ICD-10 https://en.wikipedia.org/wiki/International_Statistical_Classification_of_Diseases_and_Related_Health_Problems
+http://www.wvupc.org/compliance/PDF/training/Intro_to_ICD-9.pdf
 
 [Back to top](#top)
