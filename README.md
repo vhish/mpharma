@@ -23,8 +23,8 @@ ___
 In a terminal instance:
 
 1. ```git clone https://github.com/vhish/mpharma.git``` (Clone the repo)
-2. ```docker-compose run web python /mpharma/manage.py migrate --noinput``` (Run migragtions)
-3. ```docker-compose run web python /mpharma/manage.py load_data``` (Seed the Postgres database in the docker instance)
+2. ```docker-compose run web python /mpharma/manage.py migrate --noinput``` (Run migragtions in the docker instance.)
+3. ```docker-compose run web python /mpharma/manage.py load_data``` (Seed the PostgreSQL database with csv files in the docker instance.)
 4. ```docker-compose up``` (Run the docker container)
 
 ___
