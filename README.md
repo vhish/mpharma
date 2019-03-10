@@ -1,23 +1,25 @@
 <a id="top"></a>
-# DIAGNOSIS API
+# DIAGNOSIS CODES API
 **Author**: Hisham Iddris
 
 **Version**: 1.0
 ___
 
 <a id="overview"></a>
-##Overview
+## Overview
+
 A Django Rest Framework API that allows you to utilize an internationally recognized set of diagnosis codes. This includes the ability to create a new diagnosis record, edit an existing diagnosis code record, list diagnosis codes in batches of 20, retrieve diagnosis code by ID and delete a diagnosis code. The API currently supports ICD-9 and ICD-10 diagnosis code types only. The API uses a PostgresSQL database for data persistence. For ease in deployment, a docker compose file is provided to spin up an instance in a docker container.
 ___
 
-##Table of contents
-*[Overview](#overview)
-*[Setting Up](#setup)
-*[API Endpoints](#api)
-*[References](#references)
+## Table of contents
+* [Overview](#overview)
+* [Setting Up](#setup)
+* [API Endpoints](#api)
+* [References](#references)
+* [Todo](#todo)
 ___
-<a id=setup></a>
-##Setting Up
+<a id="setup"></a>
+## Setting Up
 In a terminal instance:
 
 1. ```git clone https://github.com/vhish/mpharma.git``` (Clone the repo)
@@ -27,12 +29,17 @@ In a terminal instance:
 
 ___
 <a id="api"></a>
-##API Endpoints
+## API Endpoints
 All API endpoints can be acessed via the API swagger link upon running the docker container. i.e. http://localhost:8000/docs
 ___
+<a id="todo"><a>
+## TODO: 
+  
+Adding authorisation to the api.
 
-<a id="reference"></a>
-*[References](#references)
+___
+<a id="references"></a>
+[References](#references)
 https://github.com/kamillamagna/ICD-10-CSV https://en.wikipedia.org/wiki/ICD-10 https://en.wikipedia.org/wiki/International_Statistical_Classification_of_Diseases_and_Related_Health_Problems
 
 [Back to top](#top)
